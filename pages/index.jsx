@@ -15,6 +15,8 @@ export default function Home() {
         <h1 className={styles.title}>
           Welcome
         </h1>
+        <br/>
+        <Link href="/preproducts"><a>PreProducts</a></Link>
         <Link href="/products"><a>Products</a></Link>
         {/*<Link href="/products"><a>Products</a></Link>*/}
          {/*<a href="/products">Products</a>*/}
