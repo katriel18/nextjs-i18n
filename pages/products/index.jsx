@@ -2,17 +2,19 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 export default function Products({ data }) {
-  //console.log('data: ',data.length)// consola visual / consola navegador
+  //console.log('data: ',data.length)// consola visual & consola navegador
 
   const router = useRouter();
-  console.log("router: ", router);
+  //console.log("router: ", router);
 
   return (
     <div>
       <br />
+
       <Link href="/">
         <a>Volver</a>
       </Link>
+
       <main>
         <h1>Products: {data.length}</h1>
         {data.map((x) => (
@@ -21,6 +23,7 @@ export default function Products({ data }) {
           </h2>
         ))}
       </main>
+
       <Link href={router.asPath} locale={router.locale === "en" ? "es" : "en"}>
         <a>Cahnge Languague</a>
       </Link>
@@ -29,9 +32,11 @@ export default function Products({ data }) {
 }
 
 export async function getServerSideProps(context) {
-  //getServerSideProps//getStaticProps
-  console.log("contextServer: ", context);
-  const res = await fetch(`http://localhost:1337/products?_locale=${context.locale}`);
+  //console.log("contextServer: ", context);
+
+  const res = await fetch(
+    `http://localhost:1337/products?_locale=${context.locale}`
+  );
   const data = await res.json();
   //console.log('data: ',data.length)// consola visual
 
