@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import Link from 'next/link'
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
@@ -14,6 +15,9 @@ export default function Home() {
         <h1 className={styles.title}>
           Welcome
         </h1>
+        <Link href="/products"><a>Products</a></Link>
+        {/*<Link href="/products"><a>Products</a></Link>*/}
+         {/*<a href="/products">Products</a>*/}
       </main>
       <footer className={styles.footer}> Powered by OK</footer>
     </div>

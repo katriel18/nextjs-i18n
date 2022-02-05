@@ -1,3 +1,4 @@
+
 export default function Products({ data }) {
   //console.log('data: ',data.length)// consola VS / consola navegador
 
@@ -13,7 +14,7 @@ export default function Products({ data }) {
   );
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {//getServerSideProps//getStaticProps
   const res = await fetch(`http://localhost:1337/products`);
   const data = await res.json();
   //console.log('data: ',data.length)// consola VS / consola navegador
