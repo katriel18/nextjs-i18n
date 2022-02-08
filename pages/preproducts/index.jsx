@@ -6,7 +6,7 @@ export default function Products({ data }) {
 
   const router = useRouter();
   //console.log("router: ", router);
-
+  console.log('data: ',data)
   return (
     <div>
       <br />

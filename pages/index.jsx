@@ -18,8 +18,12 @@ export default function Home() {
           <a>PreProducts</a>
         </Link>
         <br />
-        <Link href="/products">
-          <a>Products</a>
+        <Link href="/preproducts/r">
+          <a>PreProducts R</a>
+        </Link>
+        <br></br>
+        <Link href="/preproducts/p">
+          <a>PreProduct P</a>
         </Link>
       </main>
 
