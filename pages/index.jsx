@@ -21,6 +21,10 @@ export default function Home() {
         <Link href="/products">
           <a>Products</a>
         </Link>
+        <br />
+        <Link href="/test">
+          <a>Test</a>
+        </Link>
       </main>
 
       <footer className={styles.footer}>
